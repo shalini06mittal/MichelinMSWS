@@ -11,6 +11,7 @@ public class ConversionBean {
     private BigDecimal quantity;
     private BigDecimal totalCalculatedAmount;
 
+    private String port;
     public ConversionBean() {
 
     }
@@ -32,6 +33,14 @@ public class ConversionBean {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getPort() {
+        return port;
+    }
+
+    public void setPort(String port) {
+        this.port = port;
     }
 
     public String getFrom() {

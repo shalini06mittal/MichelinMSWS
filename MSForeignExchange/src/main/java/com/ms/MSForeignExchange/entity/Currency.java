@@ -15,6 +15,8 @@ public class Currency {
     private String to;
     private double conversionrate;
 
+    private  String port;
+
     public Currency() {
     }
 
@@ -55,6 +57,14 @@ public class Currency {
 
     public void setConversionrate(double conversionrate) {
         this.conversionrate = conversionrate;
+    }
+
+    public String getPort() {
+        return port;
+    }
+
+    public void setPort(String port) {
+        this.port = port;
     }
 
     @Override

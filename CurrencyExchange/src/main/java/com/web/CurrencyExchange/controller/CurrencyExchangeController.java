@@ -45,21 +45,5 @@ public class CurrencyExchangeController {
 		bean.setTotalCalculatedAmount(bean.getQuantity().multiply(bean.getConversionrate()));
 		return bean;
 	}
-	@@PostMapping("/exchange1/from/{from}/to/{to}/quantity/{quantity}")
-	public ConversionBean calculateAmount1(
-			@PathVariable String from,
-			@PathVariable String to,
-			@PathVariable BigDecimal quantity) {
-		String url = "http://localhost:8081/forex/from/{from}/to/{to}";
-//		RestTemplate template = new RestTemplate();
-		Map<String, String> map = new HashMap<>();
-		map.put("from", from);
-		map.put("to", to);
-
-		ConversionBean bean = template.getForObject(url, ConversionBean.class, map);
-		bean.setQuantity(quantity);
-		bean.setTotalCalculatedAmount(bean.getQuantity().multiply(bean.getConversionrate()));
-		return bean;
-	}
 	
 }

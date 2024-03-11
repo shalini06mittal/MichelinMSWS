@@ -32,6 +32,7 @@ public class CurrencyExchangeController {
 		ConversionBean bean = template.getForObject(url, ConversionBean.class, map);
 		bean.setQuantity(quantity);
 		bean.setTotalCalculatedAmount(bean.getQuantity().multiply(bean.getConversionrate()));
+		System.out.println(bean);
 		return bean;
 	}
 
